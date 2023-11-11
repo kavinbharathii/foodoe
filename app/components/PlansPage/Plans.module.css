@@ -1,0 +1,36 @@
+
+.fullPage {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 100vw;
+    height: 100vh;
+}
+
+.planContent {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.highlighted {
+    color: var(--primary-accent);
+}
+
+.planCards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.cardRow {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+}

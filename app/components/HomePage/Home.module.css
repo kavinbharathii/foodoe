@@ -1,0 +1,26 @@
+
+.fullPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100vw;
+    height: 100vh;
+}
+
+.heroContent {
+    margin-left: 15rem;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.highlighted {
+    color: var(--primary-accent);
+}
+
+
+.heroImage {
+    width: 50vw;
+    height: auto;
+
+}

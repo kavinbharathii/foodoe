@@ -1,0 +1,27 @@
+
+.navBar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100vw;
+    height: 10vh;
+
+    position: absolute;
+}
+
+.logo {
+    color: var(--primary-accent);
+    width: 30vw;
+    font-size: 2rem;
+}   
+
+.navLinks {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+    width: 30vw;
+}

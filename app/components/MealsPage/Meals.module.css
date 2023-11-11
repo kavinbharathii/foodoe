@@ -1,0 +1,49 @@
+
+.fullPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    
+    width: 100vw;
+    height: 100vh;
+}
+
+.topContent {
+    text-align: center;
+    width: 50vw;
+}
+
+.topContent > h1 {
+    font-size: 3rem;
+}
+
+.highlighted {
+    color: var(--primary-accent);
+}
+
+.bottomContent {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100vw;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardImage {
+    width: auto;
+    height: 50vh;
+}
+
+.cardText {
+    font-size: 2rem;
+}
