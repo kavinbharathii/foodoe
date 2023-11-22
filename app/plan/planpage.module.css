@@ -1,0 +1,71 @@
+
+
+.fullPage {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.orangeSection {
+    background-color: var(--primary-accent);
+    color: var(--white);
+    font-size: 2em;
+
+    border-radius: 20px 0px 0px 20px;
+
+    width: 25vw;
+    height: 80vh;
+
+    padding: 1rem;
+}
+
+.bmiSection {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    width: 40vw;
+    height: 80vh;
+
+    padding: 1rem;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    border-radius: 0px 20px 20px 0px;
+
+    position: relative;
+}
+
+.inputBox > p {
+    font-size: 1.2rem;
+}
+
+.inputBox > input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.calculateButton {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+
+    background-color: var(--primary-accent);
+    color: var(--white);
+}
+
+.footnote {
+    font-size: 0.5rem;
+    position: absolute;
+    bottom: 5px;
+}

@@ -7,7 +7,7 @@ const FooterPage = () => {
         <section className={styles.footerPage}>
             <div className={styles.topContent}>
                 <p>Foodoe is a cloud kitchen based company that aims to</p>
-                <p>create calculated healthy meals without compromising that</p>
+                <p>create curated healthy meals without compromising that</p>
                 <p>Southern touch we all yearn and crave. Based in</p>
                 <p><span className={styles.chennai}>Namma Chennai,</span> we promise to bring</p>
                 <p>pure tamil love to your next diet plan</p>
