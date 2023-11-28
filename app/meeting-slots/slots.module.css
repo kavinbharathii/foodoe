@@ -1,0 +1,53 @@
+
+.fullPage {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.heading {
+    font-size: 3em;
+    margin-left: 1rem;
+}
+
+.highlighted {
+    color: var(--primary-accent);
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: left;
+    flex-direction: column;
+
+    gap: 5rem;
+    margin-left: 5rem;
+}
+
+.orange {
+    width: 30vw;
+    height: 100vh;
+
+    background-color: var(--primary-accent);
+}
+
+.slotRows {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+}
+
+.slotsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: row;
+
+    gap: 1rem;
+    width: fit-content;
+}

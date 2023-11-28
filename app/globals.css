@@ -12,8 +12,9 @@
 }
 
 :root {
-	--primary-accent: #FE881B; 
 	--primary-accent-light: #ffac5e;
+	--primary-accent: #FE881B; 
+	--primary-accent-dark: #f45500;
 	--white: #ffffff;
 	--black: #000000;
 }

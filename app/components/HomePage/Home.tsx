@@ -8,6 +8,7 @@ import Image from "next/image";
 const HomePage = () => {
     return (
         <section className={styles.fullPage}>
+            <div className={styles.dropScreen}></div>
             <div className={styles.heroContent}>
                 <p>Same <span className={styles.highlighted}>Taste</span></p>
                 <p>Same <span className={styles.highlighted}>Flavor</span>.</p>

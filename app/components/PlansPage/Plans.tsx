@@ -13,14 +13,16 @@ const PlansPage = () => {
 
             <div className={styles.planCards}>
                 <div className={styles.cardRow}>
-                    <PlanCard planName="Weight loss" />
-                    <PlanCard planName="Weight gain" />
+                    <PlanCard planName="High Protein" />
+                    <PlanCard planName="Low Calorie" />
+                    <PlanCard planName="Low GI" />
                 </div>
 
+                {/* 
                 <div className={styles.cardRow}>
                     <PlanCard planName="Gluten free" />
                     <PlanCard planName="Keto diet" />
-                </div>
+                </div> */}
 
             </div>
         </section>

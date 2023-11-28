@@ -3,6 +3,7 @@
 import React from "react"
 import styles from "./planpage.module.css"
 import { useState } from "react"
+import Link from "next/link"
 
 const BMIPage = () => {
 
@@ -67,20 +68,26 @@ const BMIPage = () => {
             <div className={styles.bmiSection}>
                 <div className={styles.inputBox}>
                     <p>Name</p>
-                    <input type="text" value={name} onChange={handleName} />
+                    <input type="text" value={name} required={true} onChange={handleName} />
                 </div>
 
                 <div className={styles.inputBox}>
                     <p>Height (in cms)</p>
-                    <input type="number" value={height} onChange={handleHeight} />
+                    <input type="number" value={height} required={true} onChange={handleHeight} />
                 </div>
 
                 <div className={styles.inputBox}>
                     <p>Weight (in kgs)</p>
-                    <input type="number" value={weight} onChange={handleWeight} />
+                    <input type="number" value={weight} required={true} onChange={handleWeight} />
                 </div>
 
-                <button className={styles.calculateButton} onClick={calculateBMI}>Calculate BMI</button>
+
+                <div className={styles.buttons}>
+                    <button className={styles.calculateButton} onClick={calculateBMI}>Calculate BMI</button>
+                    <Link href="/book-meeting">
+                        <button className={styles.proceedButton}>Continue</button>
+                    </Link>
+                </div>
 
                 <div className={styles.footnote}>
                     <p>*Your privacy matters. We do not share your personal information with third parties.</p>

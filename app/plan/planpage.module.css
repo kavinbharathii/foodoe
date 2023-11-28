@@ -55,6 +55,14 @@
     padding: 20px;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: row;
+}
+
 .calculateButton {
     width: 150px;
     height: 50px;
@@ -62,6 +70,21 @@
 
     background-color: var(--primary-accent);
     color: var(--white);
+}
+
+.proceedButton {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--white);
+    
+    background-color: var(--white);
+    color: var(--primary-accent);
+    transition: all 200ms ease-in-out;
+}
+
+.proceedButton:hover {
+    border: 1px solid var(--primary-accent);
 }
 
 .footnote {

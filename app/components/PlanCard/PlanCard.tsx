@@ -1,12 +1,15 @@
 
 import React from "react";
 import styles from "./PlanCard.module.css"
+import Link from "next/link";
 
 const PlanCard = ({planName} : {planName : String}) => {
     return (
-        <div className={styles.planCard}>
-            {planName}
-        </div>
+        <Link href="/plan">
+            <div className={styles.planCard}>
+                {planName}
+            </div>
+        </Link>
     )
 }
 

@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+.slotCard {
+    font-family: "JetBrains Mono", sans-serif;
+    border-radius: 10px;
+    padding: 0.5rem 0.8rem;
+    margin: 1rem;
+    color: var(--black);
+    transition: all 200ms ease-in-out;
+}
+
+.slotCard:hover {
+    color: var(--white);
+}
+
+.morning {
+    background-color: var(--primary-accent-light);
+}
+
+.afternoon {
+    background-color: var(--primary-accent-dark);
+}
+
+.evening {
+    background-color: var(--primary-accent);
+}
