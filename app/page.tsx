@@ -25,7 +25,7 @@ export default function Home() {
 			<HomePage/>
 			<MealsPage/>
 			<PlansPage/>
-			<CustomerPage/>
+			{/* <CustomerPage/> */}
 			<FooterPage/>
 		</>
 	)

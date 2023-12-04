@@ -19,16 +19,19 @@ const MealsPage = () => {
 
             <div className={styles.bottomContent}>
                 <div className={styles.card}>
+                    <div className={styles.dropScreen}></div>
                     <Image src={Biryani} className={styles.cardImage} alt="Chicken Biryani" />
                     <p className={styles.cardText}>Tasty</p>
                 </div>
 
                 <div className={styles.card}>
+                    <div className={styles.dropScreen}></div>
                     <Image src={Fish} className={styles.cardImage} alt="Fish Curry" />
                     <p className={styles.cardText}>Flavorful</p>
                 </div>
 
                 <div className={styles.card}>
+                    <div className={styles.dropScreen}></div>
                     <Image src={Chicken} className={styles.cardImage} alt="Chicken Curry" />
                     <p className={styles.cardText}>Healthy</p>
                 </div>

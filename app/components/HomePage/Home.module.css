@@ -32,8 +32,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        background-color: #00000000;
     }
 
     .dropScreen {
@@ -57,7 +55,7 @@
     }
 
     .heroContent {
-        font-size: 2rem;
+        font-size: 4rem;
         margin-left: 0;
 
         color: var(--white);
