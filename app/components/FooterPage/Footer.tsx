@@ -1,16 +1,27 @@
 
 import React from "react";
 import styles from "./Footer.module.css"
+import Link from "next/link";
 
 const FooterPage = () => {
+
+    const instgramLink = "https://www.instagram.com/foodoe.in/"
+    const youtubeLink = "https://www.youtube.com/@Foodoe"
+    const linkedinLink = "https://www.linkedin.com/in/foodoe-in-8766472a3/"
     return (
         <section className={styles.footerPage}>
             <div className={styles.topContent}>
-                <p>Foodoe is a cloud kitchen based company that aims to</p>
+                {/* <p>Foodoe is a cloud kitchen based company that aims to</p>
                 <p>create curated healthy meals without compromising that</p>
                 <p>tasty meals we all yearn and crave. Based in</p>
                 <p><span className={styles.chennai}>Namma Chennai,</span> we promise to bring</p>
-                <p>pure tamil love to your next diet plan</p>
+                <p>pure tamil love to your next diet plan</p> */}
+
+                <Link href={instgramLink} target="_blank">foodoe.in@instagram</Link>
+                <br />
+                <Link href={youtubeLink} target="_blank">foodoe.in@youtube</Link>
+                <br />
+                <Link href={linkedinLink} target="_blank">foodoe.in@linkedin</Link>
             </div>
 
             <div className={styles.bottomContent}>

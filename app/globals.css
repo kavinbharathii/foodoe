@@ -18,7 +18,8 @@ body {
 
 :root {
 	--primary-accent-light: #ffac5e;
-	--primary-accent: #FE881B;
+	--primary-accent: #00ad62;
+	/* --primary-accent: #007643; */
 	--primary-accent-dark: #f45500;
 	--white: #ffffff;
 	--black: #000000;

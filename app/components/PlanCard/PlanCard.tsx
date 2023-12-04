@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const PlanCard = ({planName} : {planName : String}) => {
     return (
-        <Link href="/plan">
+        <Link href="/bmi">
             <div className={styles.planCard}>
                 {planName}
             </div>
