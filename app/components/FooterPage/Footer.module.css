@@ -56,10 +56,15 @@
     }
 
     .logo {
-        font-size: 3rem;
+        font-size: 2rem;
+        margin: 0;
+        margin-bottom: 2px;
+        margin-left: 2rem;
     }
 
     .creator {
-        display: none;
+        /* display: none; */
+        font-size: 10px;
+        margin-bottom: 10px;
     }
 }
