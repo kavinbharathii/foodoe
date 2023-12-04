@@ -56,9 +56,12 @@
 
     .fullPage {
         width: 100vw;
-        height: auto;
+        /* height: auto;
         margin-top: 2rem;
-        margin-bottom: 10rem;
+        margin-bottom: 10rem; */
+
+        justify-content: center;
+        align-items: center;
     }
 
     .topContent {
@@ -80,9 +83,18 @@
         gap: 5rem;
     }
 
+    .card {
+        width: 80vw;
+        height: 30vw;
+
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
     .cardImage {
-        height: 60vw;
-        width: auto;
+        /* height: 60vw; */
+        width: 100%;
+        position: absolute;
         z-index: -1;
     }
 
@@ -100,7 +112,7 @@
 
     .cardText {
         position: absolute;
-        font-size: 3rem;
+        font-size: 2.5rem;
         z-index: 5;
         color: var(--white);
     }
