@@ -25,3 +25,18 @@
 
     width: 30vw;
 }
+
+@media only screen and (max-width: 600px) {
+    .navBar {
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-left: 1rem;
+    }
+
+    .navLinks {
+        color: var(--white);
+        width: 50vw;
+    }
+}
