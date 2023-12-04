@@ -10,7 +10,7 @@
 
     font-size: 2rem;
 
-    border: 2px solid #dedede;
+    border: 2px solid var(--black);
     border-radius: 20px;
     transition: all 200ms ease-in-out;
     margin: 1rem;

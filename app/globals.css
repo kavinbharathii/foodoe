@@ -12,6 +12,10 @@
 	/* font-family: 'Outfit', sans-serif; */
 }
 
+body {
+	background-color: #E0D8B0;
+}
+
 :root {
 	--primary-accent-light: #ffac5e;
 	--primary-accent: #FE881B;
