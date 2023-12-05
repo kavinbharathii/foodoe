@@ -9,20 +9,20 @@ const About = () => {
         <section className={styles.fullPage}>
             <Image src={Doodle} alt="foodoe doodle" className={styles.doodle} />
             <div className={styles.content}>
-                <div>
-                    FOOD: We provide breakfast, lunch, snacks and dinner. We provide healthier alternatives of your favorite dishes and do not repeat a dish for 4 weeks.
-                </div>
-
-                <div>
-                    NUTRITION: We assign you a personal nutritionist who assesses your lifestyle, health requirements, eating habits and nutritional needs to help you achieve your nutrition goal.
-                </div>
-
-                <div>
-                    MEAL DELIVERY: We deliver meals for the low-carb High Protein, Vegan and Balanced Diet.
-                </div>
-
-                <div>
-                    FLEXIBILITY: We provide flexibility in terms of pausing  your meals, food and delivery preferences subject to our guidelines.
+                <div className={styles.heading}>But, why <span className={styles.highlighted}>Foodoe?!</span></div>
+                <div className={styles.contentPoints}>
+                    <div>
+                        <span className={styles.boldTag}>FOOD:</span> We provide breakfast, lunch, snacks and dinner. We provide healthier alternatives of your favorite dishes and do not repeat a dish for 4 weeks.
+                    </div>
+                    <div>
+                        <span className={styles.boldTag}>NUTRITION:</span> We assign you a personal nutritionist who assesses your lifestyle, health requirements, eating habits and nutritional needs to help you achieve your nutrition goal.
+                    </div>
+                    <div>
+                        <span className={styles.boldTag}>MEAL DELIVERY:</span> We deliver meals for the low-carb High Protein, Vegan and Balanced Diet.
+                    </div>
+                    <div>
+                        <span className={styles.boldTag}>FLEXIBILITY:</span> We provide flexibility in terms of pausing  your meals, food and delivery preferences subject to our guidelines.
+                    </div>
                 </div>
             </div>
         </section>

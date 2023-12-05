@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage/Home"
 import MealsPage from "./components/MealsPage/Meals"
 import PlansPage from "./components/PlansPage/Plans"
 import CustomerPage from "./components/CustomerPage/Customer"
+import About from "./components/AboutPage/About"
 import FooterPage from "./components/FooterPage/Footer"
 import Navbar from './components/Navbar/Navbar'
 
@@ -26,6 +27,7 @@ export default function Home() {
 			<MealsPage/>
 			<PlansPage/>
 			{/* <CustomerPage/> */}
+			<About />
 			<FooterPage/>
 		</>
 	)
