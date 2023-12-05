@@ -19,7 +19,7 @@ const PlansPage = () => {
                 </div>
                 <div className={styles.planCardsRow}>
                     <PlanCard planName="Low GI" />
-                    <PlanCard planName="Let the nutrionist decide" />
+                    <PlanCard planName="Let the nutritionist decide" />
                     <PlanCard planName="Take a free session" isSpecial={true}/>
                 </div>
             </div>
