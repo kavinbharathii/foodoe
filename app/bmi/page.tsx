@@ -12,6 +12,8 @@ const BMIPage = () => {
     const [name, setName] = useState('')
     const [height, setHeight] = useState('')
     const [weight, setWeight] = useState('')
+    const [bmi, setBmi] = useState(0)
+    const [result, setResult] = useState('')
 
     const handleName = (e: any) => {
         setName(e.target.value)
@@ -43,19 +45,23 @@ const BMIPage = () => {
             const numerator = parseInt(weight);
             const denominator = heightInMts ** 2;
             const result = numerator / denominator;
-            const bmi = parseFloat(result.toFixed(2))
+            setBmi(parseFloat(result.toFixed(2)))
 
             console.log(bmi)
 
             if (bmi < 18.5) {
                 console.log("Underweight")
+                setResult("Underweight")
             } else {
                 if (bmi >= 30) {
                     console.log("Obese")
+                    setResult("Obese")
                 } else if (bmi >= 25) {
                     console.log("Overweight")
+                    setResult("Overweight")
                 } else {
                     console.log("Normal weight")
+                    setResult("Normal weight")
                 }
             }
         }
@@ -63,9 +69,15 @@ const BMIPage = () => {
 
     return (
         <section className={styles.fullPage}>
-            <Image src={Doodle} alt="foodoe doodle" className={styles.doodle}/>
+            <Image src={Doodle} alt="foodoe doodle" className={styles.doodle} />
             <div className={styles.orangeSection}>
                 Your Body Mass Index (BMI) helps us understand your health better.
+
+                <div className={styles.bmiDisplay}>
+                {
+                    (bmi != 0) && `Your BMI: ${bmi}/${result}`
+                }
+                </div>
             </div>
 
             <div className={styles.bmiSection}>
