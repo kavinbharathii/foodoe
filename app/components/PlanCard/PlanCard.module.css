@@ -16,10 +16,19 @@
     margin: 1rem;
 
     text-align: center;
+
+    background-color: #343434;
+    color: var(--primary-accent);
+}
+
+.isSpecial {
+    background-color: var(--primary-accent);
+    color: var(--black);
+    border: none;
 }
 
 .planCard:hover {
-    color: var(--primary-accent);
+    color: var(--white);
     /* box-shadow: 0px 0px 15px var(--primary-accent-light); */
     border: 1px solid var(--primary-accent);
 }
@@ -27,7 +36,9 @@
 @media only screen and (max-width: 700px) {
 
     .planCard {
-        width: 80vw;
-        height: 30vw;
+        width: 35vw;
+        height: 35vw;
+        padding: 0.5rem;
+        font-size: 1rem;
     }
 }
