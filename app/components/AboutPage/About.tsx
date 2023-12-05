@@ -2,10 +2,12 @@
 import React from "react";
 import styles from "./About.module.css"
 import Image from "next/image";
+import Doodle from "./assets/doodle.png"
 
 const About = () => {
     return (
         <section className={styles.fullPage}>
+            <Image src={Doodle} alt="foodoe doodle" className={styles.doodle} />
             <div className={styles.content}>
                 <div>
                     FOOD: We provide breakfast, lunch, snacks and dinner. We provide healthier alternatives of your favorite dishes and do not repeat a dish for 4 weeks.
@@ -23,8 +25,6 @@ const About = () => {
                     FLEXIBILITY: We provide flexibility in terms of pausing  your meals, food and delivery preferences subject to our guidelines.
                 </div>
             </div>
-
-
         </section>
     )
 }

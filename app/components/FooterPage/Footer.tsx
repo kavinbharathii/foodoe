@@ -17,11 +17,11 @@ const FooterPage = () => {
                 <p><span className={styles.chennai}>Namma Chennai,</span> we promise to bring</p>
                 <p>pure tamil love to your next diet plan</p> */}
 
-                <Link href={instgramLink} target="_blank">foodoe.in@instagram</Link>
+                <Link href={instgramLink} target="_blank">instagram/foodoe.in</Link>
                 <br />
-                <Link href={youtubeLink} target="_blank">foodoe.in@youtube</Link>
+                <Link href={youtubeLink} target="_blank">youtube/foodoe.in</Link>
                 <br />
-                <Link href={linkedinLink} target="_blank">foodoe.in@linkedin</Link>
+                <Link href={linkedinLink} target="_blank">linkedin/foodoe.in</Link>
             </div>
 
             <div className={styles.bottomContent}>
