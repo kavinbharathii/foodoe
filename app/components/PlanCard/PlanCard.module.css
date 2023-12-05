@@ -10,20 +10,20 @@
 
     font-size: 2rem;
 
-    border: 2px solid var(--black);
     border-radius: 20px;
     transition: all 200ms ease-in-out;
     margin: 1rem;
 
     text-align: center;
 
-    background-color: #343434;
+    /* background-color: #343434; */
+    background-color: #004225;
     color: var(--primary-accent);
 }
 
 .isSpecial {
     background-color: var(--primary-accent);
-    color: var(--black);
+    color: #004225;
     border: none;
 }
 
