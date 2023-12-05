@@ -26,8 +26,15 @@
     background-color: var(--primary-accent);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .slotCard {
-        font-size: 0.6rem;
+        font-size: 2.5vw;
+        aspect-ratio: 2.8/1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
+
 }

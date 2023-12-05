@@ -63,7 +63,7 @@
     opacity: 0.2;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .fullPage {
         flex-direction: column;
         justify-content: space-between;
@@ -78,11 +78,12 @@
         font-size: 0.8rem;
         margin: 0;
         margin-top: 2rem;
-        /* padding: 2rem; */
     }
 
     .slotRows {
         flex-direction: row;
+        margin: 0;
+        margin: auto;
     }
 
     .slotsRow {

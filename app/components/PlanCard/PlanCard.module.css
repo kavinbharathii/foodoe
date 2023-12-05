@@ -24,7 +24,7 @@
     border: 1px solid var(--primary-accent);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
     .planCard {
         width: 80vw;
