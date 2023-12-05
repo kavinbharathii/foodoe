@@ -33,10 +33,12 @@
     width: 40vw;
     height: 80vh;
 
+    background-color: var(--white);
+
     padding: 1rem;
-    border-top: 1px solid #dedede;
-    border-right: 1px solid #dedede;
-    border-bottom: 1px solid #dedede;
+    border-top: 1px solid var(--primary-accent);
+    border-right: 1px solid var(--primary-accent);
+    border-bottom: 1px solid var(--primary-accent);
     border-radius: 0px 20px 20px 0px;
 
     position: relative;
@@ -91,4 +93,35 @@
     font-size: 0.5rem;
     position: absolute;
     bottom: 5px;
+}
+
+.doodle {
+    position: absolute;
+    height: 100vh;
+    width: auto;
+
+    left: -10px;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+    .fullPage {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .orangeSection {
+        width: 90vw;
+        height: 20vh;
+        font-size: 1.5rem;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .bmiSection {
+        width: 90vw;
+        justify-content: space-evenly;
+
+        border-radius: 0px 0px 20px 20px;
+    }
+
 }

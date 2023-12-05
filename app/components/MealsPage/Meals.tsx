@@ -5,6 +5,7 @@ import Image from "next/image";
 import Biryani from "./assets/biryaniImage.png"
 import Fish from "./assets/fishImage.png"
 import Chicken from "./assets/chickenImage.png"
+import Link from "next/link";
 
 const MealsPage = () => {
     return (
@@ -18,26 +19,34 @@ const MealsPage = () => {
             </div>
 
             <div className={styles.bottomContent}>
-                <div className={styles.card}>
-                    <div className={styles.dropScreen}></div>
-                    <Image src={Biryani} className={styles.cardImage} alt="Chicken Biryani" />
-                    <p className={styles.cardText}>Tasty</p>
-                </div>
 
-                <div className={styles.card}>
-                    <div className={styles.dropScreen}></div>
-                    <Image src={Fish} className={styles.cardImage} alt="Fish Curry" />
-                    <p className={styles.cardText}>Flavorful</p>
-                </div>
+                <Link href="/bmi">
+                    <div className={styles.card}>
+                        <div className={styles.dropScreen}></div>
+                        <Image src={Biryani} className={styles.cardImage} alt="Chicken Biryani" />
+                        <p className={styles.cardText}>Tasty</p>
+                    </div>
+                </Link>
 
-                <div className={styles.card}>
-                    <div className={styles.dropScreen}></div>
-                    <Image src={Chicken} className={styles.cardImage} alt="Chicken Curry" />
-                    <p className={styles.cardText}>Healthy</p>
-                </div>
+                <Link href="/bmi">
+                    <div className={styles.card}>
+                        <div className={styles.dropScreen}></div>
+                        <Image src={Fish} className={styles.cardImage} alt="Fish Curry" />
+                        <p className={styles.cardText}>Flavorful</p>
+                    </div>
+                </Link>
+
+                <Link href="/bmi">
+                    <div className={styles.card}>
+                        <div className={styles.dropScreen}></div>
+                        <Image src={Chicken} className={styles.cardImage} alt="Chicken Curry" />
+                        <p className={styles.cardText}>Healthy</p>
+                    </div>
+                </Link>
             </div>
         </section>
     )
 }
+
 
 export default MealsPage

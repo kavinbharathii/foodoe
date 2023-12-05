@@ -4,6 +4,8 @@ import React from "react"
 import styles from "./planpage.module.css"
 import { useState } from "react"
 import Link from "next/link"
+import Doodle from "./assets/doodle.png"
+import Image from "next/image"
 
 const BMIPage = () => {
 
@@ -61,6 +63,7 @@ const BMIPage = () => {
 
     return (
         <section className={styles.fullPage}>
+            <Image src={Doodle} alt="foodoe doodle" className={styles.doodle}/>
             <div className={styles.orangeSection}>
                 Your Body Mass Index (BMI) helps us understand your health better.
             </div>

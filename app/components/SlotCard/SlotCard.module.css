@@ -25,3 +25,9 @@
 .evening {
     background-color: var(--primary-accent);
 }
+
+@media only screen and (max-width: 600px) {
+    .slotCard {
+        font-size: 0.6rem;
+    }
+}

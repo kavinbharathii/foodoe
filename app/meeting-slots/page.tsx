@@ -4,10 +4,13 @@
 import React from "react";
 import styles from "./slots.module.css"
 import Slot from "../components/SlotCard/SlotCard";
+import Doodle from "./assets/doodle.png"
+import Image from "next/image";
 
 const Slots = () => {
     return (
         <section className={styles.fullPage}>
+            <Image src={Doodle} alt="foodoe doodle" className={styles.doodle} />
 
             <div className={styles.content}>
                 <h1 className={styles.heading}>
