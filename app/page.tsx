@@ -9,7 +9,6 @@ import About from "./components/AboutPage/About"
 import FooterPage from "./components/FooterPage/Footer"
 import Navbar from './components/Navbar/Navbar'
 
-
 export const metadata: Metadata = {
 	title: "Foodoe."
 }
