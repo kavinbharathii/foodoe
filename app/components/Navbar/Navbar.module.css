@@ -8,11 +8,9 @@
     width: 100vw;
     height: 10vh;
 
-    position: fixed;
+    /* position: fixed; */
     background-color: #E0D8B0;
     z-index: 100;
-    /* box-shadow: 0px 30px 60px #e8d5b5; */
-    /* border-bottom: 2px solid #53503d; */
 }
 
 .logo {
@@ -22,13 +20,44 @@
     margin: 0px 2rem;
 }   
 
-.navLinks {
+.navContent {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 
-    width: 30vw;
+    width: 10vw;
+}
+
+.navLinks {
+    display: block;
+    position: absolute;
+    width: 15vw;
+    top: 1.5vh;
+    right: 3.5vw;
+
+    background-color: var(--white);
+    padding: 3rem 1rem 1rem 1rem;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: left;
+    gap: 10px;
+    flex-direction: column;
+
+    z-index: 10;
+
+    transition: 200ms all ease-in-out;
+}
+
+.displayNone {
+    display: none;
+}
+
+.hamburger {
+    z-index: 100;
+    cursor: pointer;
 }
 
 .signIn {
@@ -58,7 +87,8 @@
     }
 
     .navLinks {
-        color: var(--white);
+        top: 2.5vh;
+        right: 5px;
         width: 50vw;
     }
 }

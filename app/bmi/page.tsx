@@ -6,6 +6,8 @@ import { useState } from "react"
 import Link from "next/link"
 import Doodle from "./assets/doodle.png"
 import Image from "next/image"
+import { useUser } from "@clerk/nextjs"
+import axios from "axios"
 
 const BMIPage = () => {
 
@@ -14,6 +16,14 @@ const BMIPage = () => {
     const [weight, setWeight] = useState('')
     const [bmi, setBmi] = useState(0)
     const [result, setResult] = useState('')
+    const {isSignedIn, isLoaded, user} = useUser()
+
+    if (user == null) {
+        // console.log("What da fuq?!")
+    } else {
+        const username = user.username
+        console.log(username)
+    }
 
     const handleName = (e: any) => {
         setName(e.target.value)
@@ -27,7 +37,7 @@ const BMIPage = () => {
         setWeight(e.target.value)
     }
 
-    const calculateBMI = () => {
+    const calculateBMI = async () => {
         if (!name) {
             console.log("No name")
         }
@@ -47,8 +57,6 @@ const BMIPage = () => {
             const result = numerator / denominator;
             setBmi(parseFloat(result.toFixed(2)))
 
-            console.log(bmi)
-
             if (bmi < 18.5) {
                 console.log("Underweight")
                 setResult("Underweight")
@@ -62,6 +70,26 @@ const BMIPage = () => {
                 } else {
                     console.log("Normal weight")
                     setResult("Normal weight")
+                }
+            }
+
+            if (user == null) {
+                // pass
+            } else {
+
+                console.log(`Calculated BMI: ${bmi}`)
+
+                const userData = {
+                    email: user.primaryEmailAddress?.toString(),
+                    username: user.username || 'default name',
+                    bmi: bmi
+                }
+
+                try {
+                    const response = await axios.post('http://127.0.0.1:3000/api/user/new', userData)
+                    console.log(response)
+                } catch (error) {
+                    console.log(error)
                 }
             }
         }

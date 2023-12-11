@@ -1,10 +1,10 @@
 
+'use client'
 import React from "react";
 import styles from "./Home.module.css"
 import HeroImage from "./assets/homeFoodImage.png"
 import Doodle from "./assets/doodle.png"
 import Image from "next/image";
-
 
 const HomePage = () => {
     return (

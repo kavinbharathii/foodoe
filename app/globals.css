@@ -22,6 +22,8 @@ body {
 	--primary-accent-dark: #f45500;
 	--white: #ffffff;
 	--black: #000000;
+
+	--clerk-accent: #6C47FF;
 }
 
 ::-webkit-scrollbar {
