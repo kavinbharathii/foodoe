@@ -86,7 +86,7 @@ const BMIPage = () => {
                 }
 
                 try {
-                    const response = await axios.post('http://127.0.0.1:3000/api/user/new', userData)
+                    const response = await axios.post('https://foodoe.vercel.app/api/user/new', userData)
                     console.log(response)
                 } catch (error) {
                     console.log(error)
