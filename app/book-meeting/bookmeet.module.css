@@ -1,0 +1,90 @@
+
+.fullPage {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.dropScreen {
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--black);
+    opacity: 0.5;
+    position: absolute;
+}
+
+.mainContent {
+    font-size: 2.5em;
+    width: 35vw;
+    text-align: center;
+    color: var(--white);
+    z-index: 1;
+}
+
+.highlighted {
+    color: var(--primary-accent);
+}
+
+.actionButton {
+    background-color: var(--primary-accent);
+    color: var(--white);
+
+    font-size: 1.5em;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    z-index: 1;
+
+    margin: 1em;
+}
+
+.assetImage {
+    position: absolute;
+    z-index: -1;
+    width: 40vw;
+    height: auto;
+}
+
+.image1 {
+    left: 100px;
+    top: 20vh;
+}
+
+.image2 {
+    top: -10px;
+    right: 150px;
+}
+
+.image3 {
+    right: 0px;
+    top: 60vh;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .mainContent {
+        width: 80vw;
+        font-size: 2rem;
+    }
+
+    .image1 {
+        width: 100vw;
+        top: 20px;
+    }
+
+    .image2 {
+        width: 100vw;
+    }
+
+    .image3 {
+        width: 100vw;
+        bottom: -20px; 
+        top: auto;
+    }
+}

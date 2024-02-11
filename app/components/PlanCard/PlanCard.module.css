@@ -1,0 +1,44 @@
+
+
+.planCard {
+    width: 15vw;
+    height: 15vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+
+    border-radius: 20px;
+    transition: all 200ms ease-in-out;
+    margin: 1rem;
+
+    text-align: center;
+
+    /* background-color: #343434; */
+    background-color: #004225;
+    color: var(--primary-accent);
+}
+
+.isSpecial {
+    background-color: var(--primary-accent);
+    color: #004225;
+    border: none;
+}
+
+.planCard:hover {
+    color: var(--white);
+    /* box-shadow: 0px 0px 15px var(--primary-accent-light); */
+    border: 1px solid var(--primary-accent);
+}
+
+@media only screen and (max-width: 700px) {
+
+    .planCard {
+        width: 35vw;
+        height: 35vw;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}

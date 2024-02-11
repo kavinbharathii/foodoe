@@ -1,0 +1,81 @@
+.fullPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.heroContent {
+    margin-left: 15rem;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.highlighted {
+    color: var(--primary-accent);
+}
+
+
+.heroImage {
+    width: 50vw;
+    height: auto;
+
+}
+
+.doodle {
+    position: absolute;
+    height: 120%;
+    width: auto;
+    left: -150px;
+    top: 10px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .fullPage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dropScreen {
+        width: 100vw;
+        height: 100vh;
+    
+        background: var(--black);
+        opacity: 0.5;
+        position: absolute;
+
+        z-index: -2;
+    }
+
+    .heroImage {
+        position: absolute;
+        height: 100vh;
+        width: auto;
+        object-fit: cover;
+
+        top: 0px;
+
+        z-index: -3;
+    }
+
+    .heroContent {
+        font-size: 3.5rem;
+        margin-left: 0;
+
+        color: var(--white);
+        z-index: 1;
+    }
+
+    .doodle {
+        display: none;
+    }
+}

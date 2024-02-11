@@ -1,0 +1,67 @@
+
+.fullPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.heading {
+    font-size: 2em;
+    text-align: center;
+}
+
+.highlighted {
+    color: var(--primary-accent);
+}
+
+.content {
+    font-size: 1.5rem;
+    width: 60vw;
+    height: 80vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;   
+    flex-direction: column;
+}
+
+.contentPoints {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
+.boldTag {
+    font-weight: 800;
+
+}
+
+.doodle {
+    position: absolute;
+    height: 100vh;
+    width: auto;
+    right: -10px;
+}
+
+@media only screen and (max-width: 700px) {
+    .doodle {
+        opacity: 0.2;
+    }
+
+    .content {
+        width: 90vw;
+    }
+
+    .contentPoints {
+        font-size: 1rem;
+    }
+}

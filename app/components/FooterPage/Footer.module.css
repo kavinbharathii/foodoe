@@ -1,0 +1,70 @@
+
+.footerPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 100vw;
+    height: 30vh;
+
+    background-color: var(--primary-accent);
+    position: relative;
+}
+
+.topContent {
+    text-align: right;
+    width: 100vw;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color: var(--white);
+}
+
+.bottomContent {
+    width: 100vw;
+}
+
+.logo {
+    margin: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    font-size: 5rem;
+}
+
+.creator {
+    margin: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.chennai {
+    color: var(--black);
+}
+
+@media only screen and (max-width: 700px) { 
+
+    .footerPage {
+        height: 10vh;
+    }
+
+    .topContent {
+        display: none;
+    }
+
+    .logo {
+        font-size: 2rem;
+        margin: 0;
+        margin-bottom: 2px;
+        margin-left: 2rem;
+    }
+
+    .creator {
+        /* display: none; */
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+}
