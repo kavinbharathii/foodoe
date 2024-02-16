@@ -2,7 +2,7 @@
 "use client"
 import React from "react"
 import styles from "./planpage.module.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Doodle from "./assets/doodle.png"
 import Image from "next/image"
@@ -16,7 +16,7 @@ const BMIPage = () => {
     const [weight, setWeight] = useState('')
     const [bmi, setBmi] = useState(0)
     const [result, setResult] = useState('')
-    const {isSignedIn, isLoaded, user} = useUser()
+    const { isSignedIn, isLoaded, user } = useUser()
 
     if (user == null) {
         // console.log("What da fuq?!")
@@ -37,7 +37,7 @@ const BMIPage = () => {
         setWeight(e.target.value)
     }
 
-    const calculateBMI = async () => {
+    const calculateBMI = () => {
         if (!name) {
             console.log("No name")
         }
@@ -56,44 +56,53 @@ const BMIPage = () => {
             const denominator = heightInMts ** 2;
             const result = numerator / denominator;
             setBmi(parseFloat(result.toFixed(2)))
+        }
+    }
 
-            if (bmi < 18.5) {
-                console.log("Underweight")
-                setResult("Underweight")
+    const categorizeBMI = () => {
+        if (bmi < 18.5) {
+            console.log("Underweight")
+            setResult("Underweight")
+        } else {
+            if (bmi >= 30) {
+                console.log("Obese")
+                setResult("Obese")
+            } else if (bmi >= 25) {
+                console.log("Overweight")
+                setResult("Overweight")
             } else {
-                if (bmi >= 30) {
-                    console.log("Obese")
-                    setResult("Obese")
-                } else if (bmi >= 25) {
-                    console.log("Overweight")
-                    setResult("Overweight")
-                } else {
-                    console.log("Normal weight")
-                    setResult("Normal weight")
-                }
-            }
-
-            if (user == null) {
-                // pass
-            } else {
-
-                console.log(`Calculated BMI: ${bmi}`)
-
-                const userData = {
-                    email: user.primaryEmailAddress?.toString(),
-                    username: user.username || 'default name',
-                    bmi: bmi
-                }
-
-                try {
-                    const response = await axios.post('https://foodoe.vercel.app/api/user/new', userData)
-                    console.log(response)
-                } catch (error) {
-                    console.log(error)
-                }
+                console.log("Normal weight")
+                setResult("Normal weight")
             }
         }
     }
+
+    const updateBMIinDb = async () => {
+        if (user == null) {
+            // pass
+        } else {
+
+            console.log(`Calculated BMI: ${bmi}`)
+
+            const userData = {
+                email: user.primaryEmailAddress?.toString(),
+                username: user.username || 'default name',
+                bmi: bmi
+            }
+
+            try {
+                const response = await axios.post('https://foodoe.vercel.app/api/user/new', userData)
+                console.log(response)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    }
+
+    useEffect(() => {
+        categorizeBMI()
+        updateBMIinDb()
+    }, [bmi])
 
     return (
         <section className={styles.fullPage}>
@@ -102,9 +111,9 @@ const BMIPage = () => {
                 Your Body Mass Index (BMI) helps us understand your health better.
 
                 <div className={styles.bmiDisplay}>
-                {
-                    (bmi != 0) && `Your BMI: ${bmi}/${result}`
-                }
+                    {
+                        (bmi != 0) && `Your BMI: ${bmi}/${result}`
+                    }
                 </div>
             </div>
 
