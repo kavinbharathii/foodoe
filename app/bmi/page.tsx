@@ -18,6 +18,8 @@ const BMIPage = () => {
     const [result, setResult] = useState('')
     const { isSignedIn, isLoaded, user } = useUser()
 
+    // if the current user of the page is numm, 
+    // there is a serious problem to be fixed.
     if (user == null) {
         // console.log("What da fuq?!")
     } else {
@@ -37,6 +39,8 @@ const BMIPage = () => {
         setWeight(e.target.value)
     }
 
+    // if all the required fields are filled, 
+    // we calculate the bmi.
     const calculateBMI = () => {
         if (!name) {
             console.log("No name")
@@ -50,6 +54,7 @@ const BMIPage = () => {
             console.log("No height")
         }
 
+        // maths to find bmi
         else {
             const heightInMts = parseInt(height) / 100;
             const numerator = parseInt(weight);
@@ -59,6 +64,7 @@ const BMIPage = () => {
         }
     }
 
+    // categorizing bmi based on the different value categories
     const categorizeBMI = () => {
         if (bmi < 18.5) {
             console.log("Underweight")
@@ -77,11 +83,11 @@ const BMIPage = () => {
         }
     }
 
+    // updating the calculated bmi value to the db
     const updateBMIinDb = async () => {
         if (user == null) {
-            // pass
+            console.log("Update in DB: Null User")
         } else {
-
             console.log(`Calculated BMI: ${bmi}`)
 
             const userData = {
@@ -90,6 +96,7 @@ const BMIPage = () => {
                 bmi: bmi
             }
 
+            console.log(userData)
             try {
                 const response = await axios.post('https://foodoe.vercel.app/api/user/new', userData)
                 console.log(response)
@@ -99,6 +106,7 @@ const BMIPage = () => {
         }
     }
 
+    // check for changes in bmi, and call the respective functions
     useEffect(() => {
         categorizeBMI()
         updateBMIinDb()
